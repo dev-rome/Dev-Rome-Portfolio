@@ -1,6 +1,12 @@
-export default function Footer() {
-  const links = ["GitHub", "LinkedIn", "Email"];
+import MagneticLink from "@/components/MagneticLink";
 
+const links = [
+  { label: "GitHub", alt: "@rome", href: "#" },
+  { label: "LinkedIn", alt: "connect", href: "#" },
+  { label: "Email", alt: "say hi", href: "#" },
+];
+
+export default function Footer() {
   return (
     <footer className="border-t border-line py-20 sm:py-24">
       <p className="mb-8 font-mono text-xs uppercase tracking-[0.18em] text-muted">
@@ -11,14 +17,13 @@ export default function Footer() {
         work.
       </p>
       <div className="flex flex-wrap gap-4">
-        {links.map((link) => (
-          <a
-            key={link}
-            href="#"
-            className="rounded-full border border-line px-6 py-3 font-serif text-2xl transition-colors hover:border-ink"
-          >
-            {link}
-          </a>
+        {links.map((l) => (
+          <MagneticLink
+            key={l.label}
+            href={l.href}
+            label={l.label}
+            alt={l.alt}
+          />
         ))}
       </div>
       <p className="mt-12 font-mono text-[11px] tracking-wide text-faint">

@@ -56,8 +56,8 @@ export default function Cursor() {
       <motion.div
         className="-translate-x-1/2 -translate-y-1/2 rounded-full"
         animate={{
-          width: active ? 56 : 10,
-          height: active ? 56 : 10,
+          width: active ? 10 : 10,
+          height: active ? 10 : 10,
           backgroundColor: active ? "#1a1916" : "#db4c44",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
