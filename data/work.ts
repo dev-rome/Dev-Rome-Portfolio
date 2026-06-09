@@ -4,35 +4,40 @@ export type Project = {
   year: string;
   meta: string;
   gradient: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
   {
     idx: "01",
-    name: "Cedar & Sage",
-    year: "2025",
-    meta: "Squarespace · template",
-    gradient: "linear-gradient(150deg,#db4c44,#5e1a16)",
+    name: "Tech Book Club",
+    year: "2026",
+    meta: "Landing page · responsive",
+    gradient: "linear-gradient(150deg,#c98a5a,#3a2418)",
+    image: "/images/Tech-Book-Landing-Page.png",
   },
   {
     idx: "02",
-    name: "Name Five Players",
-    year: "2025",
-    meta: "Podcast · women in sports",
-    gradient: "linear-gradient(150deg,#d98a5a,#3a1f12)",
+    name: "Job Listings",
+    year: "2026",
+    meta: "React · filtering UI",
+    gradient: "linear-gradient(150deg,#5ec4bd,#10403c)",
+    image: "/images/Job-Listing.png",
   },
   {
     idx: "03",
-    name: "Quill",
-    year: "2024",
-    meta: "Concept · AI landing",
-    gradient: "linear-gradient(150deg,#8a6cff,#241b52)",
+    name: "REST Countries",
+    year: "2026",
+    meta: "React · REST API · dark mode",
+    gradient: "linear-gradient(150deg,#3a4a5a,#15202b)",
+    image: "/images/Rest-Countries-API.png",
   },
   {
     idx: "04",
-    name: "Folio Studio",
-    year: "2024",
-    meta: "Build · React + motion",
-    gradient: "linear-gradient(150deg,#3a3a34,#15150f)",
+    name: "Recipe Finder",
+    year: "2026",
+    meta: "Landing page · whole-food recipes",
+    gradient: "linear-gradient(150deg,#2e5d4a,#15301f)",
+    image: "/images/Recipe-Finder.png",
   },
 ];

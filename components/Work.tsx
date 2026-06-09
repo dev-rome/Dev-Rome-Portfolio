@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import {
   AnimatePresence,
@@ -35,7 +36,7 @@ export default function Work() {
       onMouseMove={interactive ? onMove : undefined}
     >
       <h2 className="mb-2.5 font-serif tracking-tight text-[clamp(28px,6vw,56px)]">
-        SelectedWork<span className="text-faint">&nbsp;(2024 — Today)</span>
+        Selected<span className="text-faint">&nbsp;Work</span>
       </h2>
 
       <div
@@ -78,18 +79,29 @@ export default function Work() {
             {active !== null && (
               <motion.div
                 key="preview"
-                className="h-70 w-55 overflow-hidden rounded-lg shadow-2xl"
+                className="relative h-40 w-80 overflow-hidden rounded-lg bg-ink shadow-2xl"
                 style={{ x: "-50%", y: "-50%" }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4, ease: EASE }}
               >
-                <div
-                  className="flex h-full w-full items-end p-4"
-                  style={{ background: projects[active].gradient }}
-                >
-                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-white/90">
+                {projects[active].image ? (
+                  <Image
+                    src={projects[active].image!}
+                    alt=""
+                    fill
+                    sizes="320px"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: projects[active].gradient }}
+                  />
+                )}
+                <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/85 via-black/35 to-transparent p-4">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.7)]">
                     {projects[active].meta}
                   </span>
                 </div>
