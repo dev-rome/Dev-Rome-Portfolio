@@ -1,9 +1,12 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <p className="text-sm uppercase tracking-widest text-neutral-500">
-        Clean slate
+    <section className="flex min-h-screen flex-col items-center justify-center gap-5">
+      <h1 className="font-serif text-6xl">
+        Frontend <span className="italic text-accent">that feels.</span>
+      </h1>
+      <p className="font-mono text-xs uppercase tracking-widest text-muted">
+        tokens + fonts wired
       </p>
-    </div>
+    </section>
   );
 }

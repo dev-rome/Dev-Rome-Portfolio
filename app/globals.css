@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
+@theme {
+  --color-stone: #c4c3b8;
+  --color-ink: #1a1916;
+  --color-muted: #6f6e64;
+  --color-faint: #a3a298;
+  --color-line: #b0afa4;
+  --color-accent: #db4c44;
+}
+
+@theme inline {
+  --font-serif: var(--font-instrument);
+  --font-mono: var(--font-jetbrains);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-stone);
+    color: var(--color-ink);
+    font-family: var(--font-mono), ui-monospace, monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
