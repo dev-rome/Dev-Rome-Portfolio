@@ -46,7 +46,9 @@ export default function Work() {
         {projects.map((project, i) => (
           <a
             key={project.idx}
-            href="#"
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseEnter={interactive ? () => setActive(i) : undefined}
             className={`flex items-baseline gap-5 border-t border-line py-6 transition-opacity duration-500 ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none ${
               active !== null && active !== i ? "opacity-30" : "opacity-100"
