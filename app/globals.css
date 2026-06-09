@@ -5,7 +5,7 @@
 @theme {
   --color-stone: #c4c3b8;
   --color-ink: #1a1916;
-  --color-muted: #6f6e64;
+  --color-muted: #56554c;
   --color-faint: #a3a298;
   --color-line: #b0afa4;
   --color-accent: #db4c44;
@@ -22,6 +22,11 @@
     color: var(--color-ink);
     font-family: var(--font-mono), ui-monospace, monospace;
     -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
   }
 }
 

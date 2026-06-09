@@ -48,11 +48,11 @@ export default function Work() {
               active !== null && active !== i ? "opacity-30" : "opacity-100"
             }`}
           >
-            <span className="w-8 shrink-0 font-mono text-xs text-muted">
+            <span className="hidden w-8 shrink-0 font-mono text-xs text-muted sm:block">
               {project.idx}
             </span>
             <span
-              className={`font-serif leading-none text-[clamp(28px,5.5vw,60px)] transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none ${
+              className={`font-serif leading-[1.05] text-[clamp(24px,7vw,60px)] transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none ${
                 active === i ? "translate-x-6" : "translate-x-0"
               }`}
             >

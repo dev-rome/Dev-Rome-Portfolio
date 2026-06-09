@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-      <header className="flex flex-wrap items-center justify-between gap-3 border-b border-line py-6 font-mono text-xs tracking-wide text-muted">
+      <header className="flex flex-col gap-2 border-b border-line py-6 font-mono text-xs tracking-wide text-muted sm:flex-row sm:items-center sm:justify-between">
         <span>
           <b className="font-medium text-ink">Dev Rome </b> — Front-end Engineer
         </span>
