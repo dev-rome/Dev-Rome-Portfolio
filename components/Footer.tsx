@@ -1,9 +1,24 @@
 import MagneticLink from "@/components/MagneticLink";
 
 const links = [
-  { label: "GitHub", alt: "@rome", href: "#" },
-  { label: "LinkedIn", alt: "connect", href: "#" },
-  { label: "Email", alt: "say hi", href: "#" },
+  {
+    label: "GitHub",
+    alt: "@dev-rome",
+    href: "https://github.com/dev-rome",
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    alt: "connect",
+    href: "https://www.linkedin.com/in/jerome-haynes/",
+    external: true,
+  },
+  {
+    label: "Email",
+    alt: "say hi",
+    href: "mailto:info.devrome@gmail.com",
+    external: false,
+  },
 ];
 
 export default function Footer() {
@@ -17,17 +32,18 @@ export default function Footer() {
         work.
       </p>
       <div className="flex flex-wrap gap-4">
-        {links.map((l) => (
+        {links.map((link) => (
           <MagneticLink
-            key={l.label}
-            href={l.href}
-            label={l.label}
-            alt={l.alt}
+            key={link.label}
+            href={link.href}
+            label={link.label}
+            alt={link.alt}
+            external={link.external}
           />
         ))}
       </div>
       <p className="mt-12 font-mono text-[11px] tracking-wide text-faint">
-        Built with Next.js, Tailwind, Motion &amp; Lenis
+        © 2026 Jerome Haynes
       </p>
     </footer>
   );

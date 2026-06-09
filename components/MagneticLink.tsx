@@ -13,11 +13,12 @@ type Props = {
   href: string;
   label: string;
   alt: string;
+  external?: boolean;
 };
 
 const SPRING = { stiffness: 200, damping: 20, mass: 0.5 };
 
-export default function MagneticLink({ href, label, alt }: Props) {
+export default function MagneticLink({ href, label, alt, external }: Props) {
   const reduce = useReducedMotion();
   const canHover = useCanHover();
   const ref = useRef<HTMLAnchorElement>(null);
@@ -52,6 +53,8 @@ export default function MagneticLink({ href, label, alt }: Props) {
     <motion.a
       ref={ref}
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       style={{ x: sx, y: sy }}
@@ -63,7 +66,7 @@ export default function MagneticLink({ href, label, alt }: Props) {
         className="relative z-10 inline-block"
       >
         <span className="inline-block h-[1.25em] overflow-hidden align-bottom">
-          <span className="flex flex-col transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:-translate-y-1/2 motion-reduce:transition-none">
+          <span className="flex flex-col text-center transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:-translate-y-1/2 motion-reduce:transition-none">
             <span className="whitespace-nowrap leading-tight">{label}</span>
             <span
               aria-hidden="true"
