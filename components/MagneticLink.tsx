@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useCanHover } from "@/hooks/useMediaQuery";
 import {
   motion,
   useMotionValue,
@@ -18,6 +19,7 @@ const SPRING = { stiffness: 200, damping: 20, mass: 0.5 };
 
 export default function MagneticLink({ href, label, alt }: Props) {
   const reduce = useReducedMotion();
+  const canHover = useCanHover();
   const ref = useRef<HTMLAnchorElement>(null);
 
   const x = useMotionValue(0);
@@ -30,7 +32,7 @@ export default function MagneticLink({ href, label, alt }: Props) {
   const siy = useSpring(iy, SPRING);
 
   const onMove = (e: React.MouseEvent) => {
-    if (reduce || !ref.current) return;
+    if (reduce || !canHover || !ref.current) return;
     const r = ref.current.getBoundingClientRect();
     const dx = e.clientX - (r.left + r.width / 2);
     const dy = e.clientY - (r.top + r.height / 2);

@@ -9,11 +9,14 @@ import {
   useSpring,
 } from "motion/react";
 import { projects } from "@/data/work";
+import { useCanHover } from "@/hooks/useMediaQuery";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function Work() {
   const reduce = useReducedMotion();
+  const canHover = useCanHover();
+  const interactive = canHover && !reduce;
   const [active, setActive] = useState<number | null>(null);
 
   const x = useMotionValue(0);
@@ -29,7 +32,7 @@ export default function Work() {
   return (
     <section
       className="py-12 sm:py-16"
-      onMouseMove={reduce ? undefined : onMove}
+      onMouseMove={interactive ? onMove : undefined}
     >
       <h2 className="mb-2.5 font-serif tracking-tight text-[clamp(28px,6vw,56px)]">
         SelectedWork<span className="text-faint">&nbsp;(2024 — Today)</span>
@@ -37,13 +40,13 @@ export default function Work() {
 
       <div
         className="border-b border-line"
-        onMouseLeave={() => setActive(null)}
+        onMouseLeave={interactive ? () => setActive(null) : undefined}
       >
         {projects.map((project, i) => (
           <a
             key={project.idx}
             href="#"
-            onMouseEnter={() => setActive(i)}
+            onMouseEnter={interactive ? () => setActive(i) : undefined}
             className={`flex items-baseline gap-5 border-t border-line py-6 transition-opacity duration-500 ease-[cubic-bezier(.16,1,.3,1)] motion-reduce:transition-none ${
               active !== null && active !== i ? "opacity-30" : "opacity-100"
             }`}
@@ -65,7 +68,7 @@ export default function Work() {
         ))}
       </div>
 
-      {!reduce && (
+      {interactive && (
         <motion.div
           aria-hidden
           className="pointer-events-none fixed left-0 top-0 z-50"
