@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jerome Haynes — Portfolio
 
-## Getting Started
+My personal portfolio — a single page, hand-built with custom motion.
 
-First, run the development server:
+## Features
+
+- **Kinetic heading** — the headline assembles letter-by-letter on load and leans toward the cursor as you move across it.
+- **Custom cursor** — a spring-following dot that grows over interactive elements.
+- **Magnetic footer links** — pull toward the cursor, with an ink-fill sweep and a roll-up label swap on hover.
+- **Cursor-trailing work previews** — hovering a project reveals a screenshot that drifts after the pointer with inertia.
+- **Smooth scroll** — eased, weighted scrolling via Lenis.
+- **Accessible & adaptive** — full `prefers-reduced-motion` support, visible keyboard focus states, and touch-aware behavior: pointer effects and smooth scroll are desktop-only, while entrance animations run everywhere.
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org) (App Router) + TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Motion](https://motion.dev) (formerly Framer Motion)
+- [Lenis](https://github.com/darkroomengineering/lenis) — smooth scroll
+- Deployed on [Netlify](https://netlify.com)
+
+## Getting started
 
 ```bash
+git clone https://github.com/dev-rome/<repo-name>.git
+cd <repo-name>
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    layout.tsx         # fonts, metadata, providers
+    page.tsx           # page composition + top bar
+    globals.css        # design tokens, base styles, Lenis + cursor CSS
+  components/
+    SmoothScroll.tsx   # Lenis provider (desktop only)
+    Cursor.tsx         # custom spring cursor
+    Hero.tsx
+    KineticHeading.tsx # split-letter reveal + cursor lean
+    Experience.tsx
+    Work.tsx           # work list + cursor-trailing preview
+    MagneticLink.tsx   # magnetic + ink-fill + roll-up label
+    Footer.tsx
+  data/
+    work.ts            # project list
+  hooks/
+    useMediaQuery.ts   # hover/pointer detection
+public/
+  work/                # project screenshots
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Accessibility & motion
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Every animation respects `prefers-reduced-motion`: the smooth scroll is disabled, the cursor and previews are hidden, and the headline appears instantly without the reveal. On touch devices, pointer-driven effects are skipped in favor of native scrolling and tapable links.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Jerome Haynes. All rights reserved.
