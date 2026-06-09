@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import Cursor from "@/components/Cursor";
 import "./globals.css";
 
 const instrument = Instrument_Serif({
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${instrument.variable} ${jetbrains.variable}`}>
       <body>
+        <Cursor />
         <SmoothScroll>
           <main>{children}</main>
         </SmoothScroll>
