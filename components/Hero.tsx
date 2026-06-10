@@ -24,7 +24,7 @@ export default function Hero() {
 
       <KineticHeading
         text="I b*u*ild fr*o*nt*e*nd th*a*t f*ee*ls."
-        className="font-serif font-normal leading-[0.94] text-[clamp(46px,11.5vw,142px)]"
+        className="font-serif font-normal leading-[0.94] text-[clamp(2.875rem,11.5vw,8.875rem)]"
       />
 
       <motion.p

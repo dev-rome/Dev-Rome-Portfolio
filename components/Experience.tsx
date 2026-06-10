@@ -10,7 +10,7 @@ export default function Experience() {
 
   return (
     <section className="py-12 sm:py-16">
-      <h2 className="mb-7 font-serif tracking-tight text-[clamp(28px,6vw,56px)]">
+      <h2 className="mb-7 font-serif tracking-tight text-section">
         Where <span className="text-faint">I&rsquo;ve&nbsp;been</span>
       </h2>
       <ul>

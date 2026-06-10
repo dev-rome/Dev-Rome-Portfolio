@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 @theme {
   --color-stone: #c4c3b8;
   --color-ink: #1a1916;
@@ -9,6 +7,11 @@
   --color-faint: #a3a298;
   --color-line: #b0afa4;
   --color-accent: #db4c44;
+
+  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --text-2xs: 0.6875rem;
+  --text-section: clamp(1.75rem, 6vw, 3.5rem);
 }
 
 @theme inline {

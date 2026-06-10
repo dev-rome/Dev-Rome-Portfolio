@@ -66,7 +66,7 @@ export default function MagneticLink({ href, label, alt, external }: Props) {
         className="relative z-10 inline-block"
       >
         <span className="inline-block h-[1.25em] overflow-hidden align-bottom">
-          <span className="flex flex-col text-center transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:-translate-y-1/2 motion-reduce:transition-none">
+          <span className="flex flex-col text-center transition-transform duration-500 ease-fluid group-hover:-translate-y-1/2 motion-reduce:transition-none">
             <span className="whitespace-nowrap leading-tight">{label}</span>
             <span
               aria-hidden="true"

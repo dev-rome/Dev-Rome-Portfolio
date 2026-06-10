@@ -27,7 +27,7 @@ export default function Footer() {
       <p className="mb-8 font-mono text-xs uppercase tracking-[0.18em] text-muted">
         Get in touch
       </p>
-      <p className="mb-10 max-w-[30ch] font-serif leading-snug text-[clamp(18px,3vw,26px)]">
+      <p className="mb-10 max-w-[30ch] font-serif leading-snug text-[clamp(1.125rem,3vw,1.625rem)]">
         Have a project, or just want a little chat? I free up time for side
         work.
       </p>
@@ -42,7 +42,7 @@ export default function Footer() {
           />
         ))}
       </div>
-      <p className="mt-12 font-mono text-[11px] tracking-wide text-faint">
+      <p className="mt-12 font-mono text-2xs tracking-wide text-faint">
         © 2026 Jerome Haynes
       </p>
     </footer>
