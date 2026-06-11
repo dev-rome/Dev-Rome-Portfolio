@@ -17,6 +17,7 @@ export default function Hero() {
     <section className="py-24 sm:py-28">
       <motion.p
         {...fade(0)}
+        data-animate
         className="mb-7 font-mono text-xs uppercase tracking-[0.2em] text-muted"
       >
         Hello — I&rsquo;m Rome
@@ -29,6 +30,7 @@ export default function Hero() {
 
       <motion.p
         {...fade(0.6)}
+        data-animate
         className="mt-11 max-w-[52ch] font-mono text-sm leading-relaxed text-muted"
       >
         I build websites with{" "}

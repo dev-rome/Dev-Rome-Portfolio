@@ -11,6 +11,7 @@ import {
 } from "motion/react";
 import { projects } from "@/data/work";
 import { useCanHover } from "@/hooks/useMediaQuery";
+import Reveal from "@/components/Reveal";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -35,41 +36,45 @@ export default function Work() {
       className="py-12 sm:py-16"
       onMouseMove={interactive ? onMove : undefined}
     >
-      <h2 className="mb-2.5 font-serif tracking-tight text-section">
-        Selected<span className="text-faint">&nbsp;Work</span>
-      </h2>
+      <Reveal>
+        <h2 className="mb-2.5 font-serif tracking-tight text-section">
+          Selected<span className="text-faint">&nbsp;Work</span>
+        </h2>
+      </Reveal>
 
-      <div
-        className="border-b border-line"
-        onMouseLeave={interactive ? () => setActive(null) : undefined}
-      >
-        {projects.map((project, i) => (
-          <a
-            key={project.idx}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseEnter={interactive ? () => setActive(i) : undefined}
-            className={`flex items-baseline gap-5 border-t border-line py-6 transition-opacity duration-500 ease-fluid motion-reduce:transition-none ${
-              active !== null && active !== i ? "opacity-30" : "opacity-100"
-            }`}
-          >
-            <span className="hidden w-8 shrink-0 font-mono text-xs text-muted sm:block">
-              {project.idx}
-            </span>
-            <span
-              className={`font-serif leading-[1.05] text-[clamp(1.5rem,7vw,3.75rem)] transition-transform duration-500 ease-fluid motion-reduce:transition-none ${
-                active === i ? "translate-x-6" : "translate-x-0"
+      <Reveal delay={0.08}>
+        <div
+          className="border-b border-line"
+          onMouseLeave={interactive ? () => setActive(null) : undefined}
+        >
+          {projects.map((project, i) => (
+            <a
+              key={project.idx}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={interactive ? () => setActive(i) : undefined}
+              className={`flex items-baseline gap-5 border-t border-line py-6 transition-opacity duration-500 ease-fluid motion-reduce:transition-none ${
+                active !== null && active !== i ? "opacity-30" : "opacity-100"
               }`}
             >
-              {project.name}
-            </span>
-            <span className="ml-auto font-mono text-2xs uppercase tracking-wider text-muted">
-              {project.year}
-            </span>
-          </a>
-        ))}
-      </div>
+              <span className="hidden w-8 shrink-0 font-mono text-xs text-muted sm:block">
+                {project.idx}
+              </span>
+              <span
+                className={`font-serif leading-[1.05] text-[clamp(1.5rem,7vw,3.75rem)] transition-transform duration-500 ease-fluid motion-reduce:transition-none ${
+                  active === i ? "translate-x-6" : "translate-x-0"
+                }`}
+              >
+                {project.name}
+              </span>
+              <span className="ml-auto font-mono text-2xs uppercase tracking-wider text-muted">
+                {project.year}
+              </span>
+            </a>
+          ))}
+        </div>
+      </Reveal>
 
       {interactive && (
         <motion.div

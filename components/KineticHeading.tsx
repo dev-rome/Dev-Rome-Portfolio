@@ -148,6 +148,7 @@ export default function KineticHeading({ text, className }: Props) {
                 >
                   <span className="inline-block overflow-hidden align-bottom">
                     <motion.span
+                      data-animate
                       className={
                         c.accent
                           ? "inline-block italic text-accent px-[0.03em]"

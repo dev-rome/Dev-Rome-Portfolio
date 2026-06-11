@@ -50,6 +50,15 @@ html.lenis body {
   overflow: clip;
 }
 
+/* Entrance animations require client JS. Without it, the server-rendered
+   hidden state (opacity:0) would persist, so reveal content to no-JS visitors. */
+@media (scripting: none) {
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 @media (pointer: coarse), (prefers-reduced-motion: reduce) {
   .custom-cursor {
     display: none;
