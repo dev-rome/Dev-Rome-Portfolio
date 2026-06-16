@@ -11,6 +11,15 @@ export type Project = {
 export const projects: Project[] = [
   {
     idx: "01",
+    name: "Archive Dex",
+    year: "2026",
+    meta: "Next.js · REST API · AI",
+    gradient: "linear-gradient(150deg,#3a4a5a,#15202b)",
+    image: "/images/archive-dex.png",
+    url: "https://archive-dex.vercel.app/",
+  },
+  {
+    idx: "02",
     name: "Tech Book Club",
     year: "2026",
     meta: "Landing page · responsive",
@@ -19,22 +28,13 @@ export const projects: Project[] = [
     url: "https://startling-moonbeam-dca236.netlify.app/",
   },
   {
-    idx: "02",
+    idx: "03",
     name: "Job Listings",
     year: "2026",
     meta: "React · filtering UI",
     gradient: "linear-gradient(150deg,#5ec4bd,#10403c)",
     image: "/images/Job-Listing.png",
     url: "https://euphonious-smakager-6b27d9.netlify.app/",
-  },
-  {
-    idx: "03",
-    name: "REST Countries",
-    year: "2026",
-    meta: "React · REST API · dark mode",
-    gradient: "linear-gradient(150deg,#3a4a5a,#15202b)",
-    image: "/images/Rest-Countries-API.png",
-    url: "https://fm-rest-countries-api-challenge.vercel.app/",
   },
   {
     idx: "04",
