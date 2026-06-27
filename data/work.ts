@@ -11,6 +11,15 @@ export type Project = {
 export const projects: Project[] = [
   {
     idx: "01",
+    name: "Criblet",
+    year: "2026",
+    meta: "Next.js · TypeScript · Tailwind CSS · Supabase · Vercel AI SDK · Anthropic",
+    gradient: "linear-gradient(150deg,#c98a5a,#3a2418)",
+    image: "/images/criblet.png",
+    url: "https://tend-delta-eight.vercel.app/",
+  },
+  {
+    idx: "02",
     name: "Archive Dex",
     year: "2026",
     meta: "Next.js · REST API · AI",
@@ -19,16 +28,16 @@ export const projects: Project[] = [
     url: "https://archive-dex.vercel.app/",
   },
   {
-    idx: "02",
+    idx: "03",
     name: "Tech Book Club",
     year: "2026",
     meta: "Landing page · responsive",
-    gradient: "linear-gradient(150deg,#c98a5a,#3a2418)",
+    gradient: "linear-gradient(150deg,#7c3aed,#2563eb)",
     image: "/images/Tech-Book-Landing-Page.png",
     url: "https://startling-moonbeam-dca236.netlify.app/",
   },
   {
-    idx: "03",
+    idx: "04",
     name: "Job Listings",
     year: "2026",
     meta: "React · filtering UI",
@@ -37,7 +46,7 @@ export const projects: Project[] = [
     url: "https://euphonious-smakager-6b27d9.netlify.app/",
   },
   {
-    idx: "04",
+    idx: "05",
     name: "Recipe Finder",
     year: "2026",
     meta: "Landing page · whole-food recipes",
