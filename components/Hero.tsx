@@ -33,13 +33,10 @@ export default function Hero() {
         data-animate
         className="mt-11 max-w-[52ch] font-mono text-sm leading-relaxed text-muted"
       >
-        I build websites with{" "}
-        <em className="font-serif italic text-ink">
-          care for the small things
-        </em>{" "}
-        — the easing on a hover, the weight of a scroll, the way type settles
-        into place. Frontend engineer working in React &amp; Next.js, with
-        TypeScript, Tailwind and Motion.
+        I build products with attention to the details people feel — the
+        interactions, performance, and systems behind the interface. Frontend
+        Software Engineer working with React, Next.js, TypeScript, and modern
+        full-stack technologies.
       </motion.p>
     </section>
   );
