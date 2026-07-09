@@ -3,6 +3,7 @@ export type Project = {
   name: string;
   year: string;
   meta: string;
+  description: string;
   gradient: string;
   image?: string;
   url: string;
@@ -14,6 +15,8 @@ export const projects: Project[] = [
     name: "Tend",
     year: "2026",
     meta: "Next.js · TypeScript · Tailwind CSS · Supabase · Vercel AI SDK · Anthropic",
+    description:
+      "Full-stack household coordination app with Supabase, AI summaries, and modern product workflows.",
     gradient: "linear-gradient(150deg,#c98a5a,#3a2418)",
     image: "/images/criblet.png",
     url: "https://tend-delta-eight.vercel.app/",
@@ -23,6 +26,8 @@ export const projects: Project[] = [
     name: "Kanban Board Application",
     year: "2026",
     meta: "Next.js · TypeScript · PostgresSQL (Neon) · Tailwind CSS",
+    description:
+      "Task management platform with authentication, PostgreSQL, validation, and backend architecture.",
     gradient: "linear-gradient(150deg,#7c3aed,#2563eb)",
     image: "/images/task-manager.png",
     url: "https://task-manager-five-khaki-48.vercel.app/",
@@ -32,6 +37,8 @@ export const projects: Project[] = [
     name: "Archive Dex",
     year: "2026",
     meta: "Next.js · REST API · AI",
+    description:
+      "AI-powered digital specimen archive built with Next.js, TypeScript, and AI workflows.",
     gradient: "linear-gradient(150deg,#3a4a5a,#15202b)",
     image: "/images/archive-dex.png",
     url: "https://archive-dex.vercel.app/",
@@ -41,6 +48,8 @@ export const projects: Project[] = [
     name: "Recipe Finder",
     year: "2026",
     meta: "Landing page · whole-food recipes",
+    description:
+      "Recipe discovery experience focused on whole-food ingredients and polished browsing flows.",
     gradient: "linear-gradient(150deg,#2e5d4a,#15301f)",
     image: "/images/Recipe-Finder.png",
     url: "https://fm-recipe-finder.vercel.app/ ",
@@ -50,6 +59,8 @@ export const projects: Project[] = [
     name: "Job Listings",
     year: "2026",
     meta: "React · filtering UI",
+    description:
+      "Interactive job board with filtering, search, and a clean card-based interface.",
     gradient: "linear-gradient(150deg,#5ec4bd,#10403c)",
     image: "/images/Job-Listing.png",
     url: "https://euphonious-smakager-6b27d9.netlify.app/",
