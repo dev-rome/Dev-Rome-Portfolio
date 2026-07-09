@@ -16,7 +16,7 @@ export const projects: Project[] = [
     year: "2026",
     meta: "Next.js · TypeScript · Tailwind CSS · Supabase · Vercel AI SDK · Anthropic",
     description:
-      "Full-stack productivity application built with Next.js and Supabase, featuring user workflows, data persistence, and AI-assisted features.",
+      "Full-stack household coordination app for couples featuring shared tasks, goals, notes, realtime collaboration, authentication, and AI-assisted workflows.",
     gradient: "linear-gradient(150deg,#c98a5a,#3a2418)",
     image: "/images/criblet.png",
     url: "https://tend-delta-eight.vercel.app/",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     year: "2026",
     meta: "Next.js · TypeScript · PostgreSQL (Neon) · Tailwind CSS",
     description:
-      "Full-stack task management application with authentication, database persistence, validation, and server-side functionality.",
+      "Full-stack Kanban platform with authentication, multi-board workflows, PostgreSQL data management, validation, and a layered backend architecture.",
     gradient: "linear-gradient(150deg,#7c3aed,#2563eb)",
     image: "/images/task-manager.png",
     url: "https://task-manager-five-khaki-48.vercel.app/",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     year: "2026",
     meta: "Next.js · TypeScript · REST API",
     description:
-      "Pokémon archive application built with Next.js and external APIs to organize, search, and display structured data.",
+      "AI-powered Pokédex archive built with Next.js and TypeScript that lets users explore 1,025 specimens through natural-language search, AI-generated curator notes, and team analysis tools.",
     gradient: "linear-gradient(150deg,#3a4a5a,#15202b)",
     image: "/images/archive-dex.png",
     url: "https://archive-dex.vercel.app/",
