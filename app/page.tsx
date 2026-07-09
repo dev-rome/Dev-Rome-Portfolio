@@ -15,7 +15,7 @@ export default function Home() {
           </span>
           <span className="flex items-center gap-2">
             <span className="size-1.75 rounded-full bg-accent" />
-            Available for freelance
+            Open to opportunities
           </span>
           <span>New York</span>
         </header>
