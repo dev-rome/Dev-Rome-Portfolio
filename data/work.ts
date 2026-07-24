@@ -12,6 +12,17 @@ export type Project = {
 export const projects: Project[] = [
   {
     idx: "01",
+    name: "Cadence",
+    year: "2026",
+    meta: "Next.js · TypeScript · Tailwind CSS · Sanity · GraphQL · Vitest · Storybook",
+    description:
+      "CMS-driven marketing site for a fictional incident-response product, with a hand-built design system, typed GraphQL content layer, per-section fallbacks, and full keyboard and screen-reader accessibility.",
+    gradient: "linear-gradient(150deg,#3b82f6,#0a0a0b)",
+    image: "/images/cadence.png",
+    url: "https://cadence-chi-seven.vercel.app/",
+  },
+  {
+    idx: "02",
     name: "Tend",
     year: "2026",
     meta: "Next.js · TypeScript · Tailwind CSS · Supabase · Vercel AI SDK · Anthropic",
@@ -22,7 +33,7 @@ export const projects: Project[] = [
     url: "https://tend-delta-eight.vercel.app/",
   },
   {
-    idx: "02",
+    idx: "03",
     name: "Kanban Board Application",
     year: "2026",
     meta: "Next.js · TypeScript · PostgreSQL (Neon) · Tailwind CSS",
@@ -33,7 +44,7 @@ export const projects: Project[] = [
     url: "https://task-manager-five-khaki-48.vercel.app/",
   },
   {
-    idx: "03",
+    idx: "04",
     name: "Archive Dex",
     year: "2026",
     meta: "Next.js · TypeScript · REST API",
@@ -44,7 +55,7 @@ export const projects: Project[] = [
     url: "https://archive-dex.vercel.app/",
   },
   {
-    idx: "04",
+    idx: "05",
     name: "Recipe Finder",
     year: "2026",
     meta: "React · API Integration · Responsive UI",
@@ -55,7 +66,7 @@ export const projects: Project[] = [
     url: "https://fm-recipe-finder.vercel.app/",
   },
   {
-    idx: "05",
+    idx: "06",
     name: "Job Listings",
     year: "2026",
     meta: "React · Filtering UI · Responsive Design",
